@@ -64,3 +64,32 @@
 /* TransMec hero film */
 .theme-transport .company-grid.has-video{opacity:1;background:none;overflow:hidden}.company-grid-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.9) contrast(1.04) brightness(.8);transform:scale(1.035)}.theme-transport .company-grid.has-video:before{content:"";position:absolute;inset:0;z-index:1;background-image:linear-gradient(#ffffff10 1px,transparent 1px),linear-gradient(90deg,#ffffff10 1px,transparent 1px);background-size:78px 78px;mix-blend-mode:screen;opacity:.28}.theme-transport .company-grid.has-video:after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,#071112b8 0%,#07111278 47%,#07111238 72%,#07111262 100%),linear-gradient(0deg,#07111245,#0711120c 48%,#07111242)}
 @media(prefers-reduced-motion:reduce){.company-grid-video{display:none}.theme-transport .company-grid.has-video{background:radial-gradient(circle at 74% 42%,#154d51,#0b1517 62%)}}
+
+/* Availability states for companies still in preparation */
+.company-card.theme-credit{--card-accent:#b8ff3d;--card-secondary:#75992a}
+.magnus-wordmark{display:grid;place-items:center;color:#102018;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;letter-spacing:.06em;line-height:.9}
+.magnus-wordmark small{margin-top:9px;color:#617366;font:600 9px var(--font-mono);letter-spacing:.25em}
+.coming-soon-tag{display:inline-flex;vertical-align:middle;margin-left:12px;padding:7px 9px;border:1px solid #1d2a2125;border-radius:999px;color:#526052;font:600 8px var(--font-mono);letter-spacing:.08em;text-transform:uppercase}
+.coming-soon-page{--coming-accent:#b8ff3d;position:relative;min-height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:0 7vw;background:#061713;color:#fff}
+.coming-soon-grid{position:absolute;inset:0;opacity:.16;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse at 70% 50%,#000,transparent 74%);pointer-events:none}
+.coming-soon-orb{position:absolute;top:17%;right:8%;width:min(42vw,570px);aspect-ratio:1;border:1px solid color-mix(in srgb,var(--coming-accent) 45%,transparent);border-radius:50%;box-shadow:inset 0 0 90px color-mix(in srgb,var(--coming-accent) 8%,transparent),0 0 0 34px color-mix(in srgb,var(--coming-accent) 4%,transparent);pointer-events:none}
+.coming-soon-orb:before,.coming-soon-orb:after{content:"";position:absolute;inset:12%;border:1px solid #ffffff20;border-radius:50%;transform:rotateX(68deg) rotateZ(-24deg)}
+.coming-soon-orb:after{inset:25%;transform:rotateY(66deg) rotateZ(38deg);border-color:color-mix(in srgb,var(--coming-accent) 28%,transparent)}
+.coming-soon-header,.coming-soon-footer{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between}
+.coming-soon-header{height:82px;border-bottom:1px solid #ffffff24}
+.coming-soon-back{font:500 10px var(--font-mono);color:#b6c5c0}
+.coming-soon-back:hover,.coming-soon-contact:hover{color:var(--coming-accent)}
+.coming-soon-content{position:relative;z-index:1;width:min(760px,100%);padding:80px 0 100px}
+.coming-soon-content .eyebrow span{background:var(--coming-accent)}
+.coming-soon-logo{display:block;width:auto;height:56px;max-width:min(250px,70vw);margin:34px 0 25px;object-fit:contain;object-position:left center}
+.coming-soon-status{display:flex;align-items:center;gap:10px;margin:34px 0 20px;color:#c0cdc7;font:600 9px var(--font-mono);letter-spacing:.17em;text-transform:uppercase}
+.coming-soon-logo+.coming-soon-status{margin-top:22px}
+.coming-soon-status i{width:7px;height:7px;border-radius:50%;background:var(--coming-accent);box-shadow:0 0 16px var(--coming-accent)}
+.coming-soon-content h1{position:relative;margin:0;font-size:clamp(3.5rem,9vw,8.4rem);font-weight:520;line-height:.9;letter-spacing:-.075em}
+.coming-soon-content h1 em{color:var(--coming-accent);font-family:Georgia,serif;font-weight:400}
+.coming-soon-copy{max-width:490px;margin:28px 0;color:#aab9b3;font-size:15px;line-height:1.7}
+.coming-soon-contact{display:inline-flex;align-items:center;gap:26px;margin-top:14px;padding:15px 0;border-bottom:1px solid #ffffff55;font:600 10px var(--font-mono);letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
+.coming-soon-contact span{color:var(--coming-accent)}
+.coming-soon-footer{gap:20px;padding:22px 0;border-top:1px solid #ffffff24;color:#81918a;font:9px var(--font-mono)}
+.coming-soon-footer a:hover{color:#fff}
+@media(max-width:780px){.coming-soon-page{padding:0 6vw}.coming-soon-header{height:70px}.coming-soon-header .brand{font-size:11px}.coming-soon-back{font-size:8px}.coming-soon-content{padding:68px 0 88px}.coming-soon-orb{width:78vw;top:32%;right:-31vw;opacity:.7}.coming-soon-content h1{font-size:clamp(3.25rem,14vw,5.5rem)}.coming-soon-copy{font-size:13px}.coming-soon-footer{align-items:flex-start;flex-direction:column;gap:12px}}

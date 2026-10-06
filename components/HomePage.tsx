@@ -83,9 +83,9 @@ export function HomePage() {
         <div className="section-heading" data-reveal><p className="eyebrow dark"><span /> O nosso ecossistema</p><h2>Especialistas em cada área.<br /><em>Uma ambição partilhada.</em></h2><p>Quatro empresas independentes, unidas por uma cultura de proximidade, rigor e inovação.</p></div>
         <div className="company-list">
           {cards.map((company, index) => <article className={`company-card ${company.className}`} key={company.slug} data-reveal onPointerMove={tiltCard} onPointerLeave={resetTilt}>
-            <div className="company-number">0{index + 1}</div><div className="company-logo-stage">{company.logo ? <img src={company.logo} alt={`${company.name} — logótipo`} /> : <span className="transmec-wordmark" aria-label="TransMec Solutions"><b>TRANS</b>MEC<small>SOLUTIONS</small></span>}</div>
-            <h3>{company.name}</h3><p>{company.intro}</p>
-            <a href={`/${company.slug}`} onClick={(event) => enterCompany(event, company)}>Explorar empresa <span>↗</span></a>
+            <div className="company-number">0{index + 1}</div><div className="company-logo-stage">{company.logo ? <img src={company.logo} alt={`${company.name} — logótipo`} /> : company.key === "credit" ? <span className="magnus-wordmark">MAGNUS<small>MICROCRÉDITO</small></span> : <span className="transmec-wordmark" aria-label="TransMec Solutions"><b>TRANS</b>MEC<small>SOLUTIONS</small></span>}</div>
+            <h3>{company.name}{company.comingSoon && <span className="coming-soon-tag">Brevemente</span>}</h3><p>{company.comingSoon ? "Página em preparação. Mais informações em breve." : company.intro}</p>
+            <a href={`/${company.slug}`} onClick={(event) => enterCompany(event, company)}>{company.comingSoon ? "Ver novidades em breve" : "Explorar empresa"} <span>↗</span></a>
           </article>)}
         </div>
       </section>

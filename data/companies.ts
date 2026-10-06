@@ -2,7 +2,7 @@ export type CompanyKey = "tech" | "legal" | "credit" | "transport";
 
 export const companies = {
   tech: {
-    key: "tech", slug: "megatechnology", name: "Megatechnology", short: "MEGA/TECH", className: "theme-tech",
+    key: "tech", slug: "megatechnology", name: "Megatechnology", short: "MEGA/TECH", className: "theme-tech", comingSoon: false,
     eyebrow: "Tecnologia · Produto · Inovação", headline: "Tecnologia que transforma negócios.",
     intro: "Desenhamos e implementamos produtos digitais, sistemas e infraestruturas que tornam organizações mais rápidas, conectadas e preparadas para crescer.",
     logo: "/brands/megatechnology-trimmed.png", showcaseImage: "/showcases/megatechnology-showcase.jpg", accent: "#22c7ec", accent2: "#0057b8", dark: "#030b1d", pale: "#eefaff", statement: "Do primeiro protótipo à operação em escala.",
@@ -16,7 +16,7 @@ export const companies = {
     steps: ["Descobrir", "Desenhar", "Construir", "Evoluir"], cta: "Vamos transformar a sua ideia numa solução digital.", ctaLabel: "Iniciar um projeto",
   },
   legal: {
-    key: "legal", slug: "legal-start", name: "Legal Start Consulting", short: "LEGAL/START", className: "theme-legal",
+    key: "legal", slug: "legal-start", name: "Legal Start Consulting", short: "LEGAL/START", className: "theme-legal", comingSoon: false,
     eyebrow: "Consultoria em registo empresarial", headline: "A sua empresa, formalizada com clareza.",
     intro: "Acompanhamos empreendedores em todas as etapas do registo empresarial, da preparação dos documentos à formalização da empresa.",
     logo: "/brands/legal-start-consulting-trimmed.png", showcaseImage: "/showcases/legal-start-showcase.jpg", accent: "#d3a349", accent2: "#062b4c", dark: "#031a2e", pale: "#f6f1e7", statement: "Registo empresarial simples, organizado e acompanhado.",
@@ -30,10 +30,10 @@ export const companies = {
     steps: ["Contacto", "Recolha de dados", "Preparação documental", "Submissão do registo", "Entrega"], cta: "Vamos formalizar a sua empresa.", ctaLabel: "Iniciar o registo",
   },
   credit: {
-    key: "credit", slug: "trust-microcredito", name: "Trust Microcrédito", short: "TRUST/CRÉDITO", className: "theme-credit",
-    eyebrow: "Financiamento simples & transparente", headline: "Crédito simples. Soluções para avançar.",
-    intro: "Financiamento acessível para particulares, empreendedores e pequenos negócios, com processos claros e acompanhamento próximo.",
-    logo: "/brands/trust-microcredito-trimmed.png", showcaseImage: "/showcases/trust-microcredito-showcase.jpg", accent: "#00b75a", accent2: "#f2bf2b", dark: "#07351f", pale: "#eff8f1", statement: "Mais clareza para dar o próximo passo.",
+    key: "credit", slug: "magnus-microcredito", name: "Magnus Microcrédito", short: "MAGNUS/CRÉDITO", className: "theme-credit", comingSoon: true,
+    eyebrow: "Microcrédito · Em preparação", headline: "Magnus Microcrédito. Brevemente.",
+    intro: "A página da Magnus Microcrédito está em preparação. Em breve, partilharemos mais informações.",
+    accent: "#b8ff3d", accent2: "#75992a", dark: "#061713", pale: "#f2f0e8", statement: "Uma nova solução financeira está a caminho.",
     services: ["Crédito pessoal", "Crédito para negócio", "Capital de giro", "Equipamento produtivo", "Crédito para emergências", "Soluções personalizadas"],
     showcaseTitle: "Financiamento que acompanha a sua realidade.",
     showcases: [
@@ -44,7 +44,7 @@ export const companies = {
     steps: ["Simule", "Solicite", "Envie documentos", "Aguarde a análise", "Receba a resposta"], cta: "O seu próximo passo pode começar hoje.", ctaLabel: "Solicitar crédito",
   },
   transport: {
-    key: "transport", slug: "transmec-solutions", name: "TransMec Solutions", short: "TRANS/MEC", className: "theme-transport",
+    key: "transport", slug: "transmec-solutions", name: "TransMec Solutions", short: "TRANS/MEC", className: "theme-transport", comingSoon: true,
     eyebrow: "Transportes · Logística · Manutenção", headline: "Movemos operações. Mantemos máquinas em ação.",
     intro: "Soluções integradas de transporte e logística, manutenção preventiva e corretiva de máquinas e equipamentos para operações seguras, eficientes e contínuas.",
     logo: "/brands/transmec-solutions.png", showcaseImage: "/showcases/transmec-solutions-showcase.jpg", accent: "#08a9b8", accent2: "#232323", dark: "#0b1517", pale: "#eef7f7", statement: "Carga em movimento. Equipamentos disponíveis.",

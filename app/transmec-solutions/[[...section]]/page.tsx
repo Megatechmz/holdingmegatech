@@ -1,20 +1,12 @@
 import type { Metadata } from "next";
-import { CompanySite } from "../../../components/CompanySite";
-import { companies, sectionLabels } from "../../../data/companies";
+import { CompanyComingSoon } from "../../../components/CompanyComingSoon";
+import { companies } from "../../../data/companies";
 
-export async function generateMetadata({ params }: { params: Promise<{ section?: string[] }> }): Promise<Metadata> {
-  const { section = [] } = await params;
-  const label = sectionLabels[section[0]];
-  const company = companies.transport;
-  return {
-    title: label ? `${label} — ${company.name}` : `${company.name} — Transportes, logística e manutenção`,
-    description: company.intro,
-    openGraph: { title: label ? `${label} — ${company.name}` : company.headline, description: company.intro, images: [] },
-    twitter: { title: label ? `${label} — ${company.name}` : company.headline, description: company.intro, images: [] },
-  };
-}
+export const metadata: Metadata = {
+  title: "TransMec Solutions — Brevemente",
+  description: "A página da TransMec Solutions está em preparação. Em breve, mais informações sobre transportes, logística e manutenção.",
+};
 
-export default async function Page({ params }: { params: Promise<{ section?: string[] }> }) {
-  const { section = [] } = await params;
-  return <CompanySite companyKey="transport" active={section[0]} />;
+export default function Page() {
+  return <CompanyComingSoon company={companies.transport} />;
 }
