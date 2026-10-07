@@ -69,7 +69,7 @@
 .company-card.theme-credit{--card-accent:#b8ff3d;--card-secondary:#75992a}
 .magnus-wordmark{display:grid;place-items:center;color:#102018;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;letter-spacing:.06em;line-height:.9}
 .magnus-wordmark small{margin-top:9px;color:#617366;font:600 9px var(--font-mono);letter-spacing:.25em}
-.coming-soon-tag{display:inline-flex;vertical-align:middle;margin-left:12px;padding:7px 9px;border:1px solid #1d2a2125;border-radius:999px;color:#526052;font:600 8px var(--font-mono);letter-spacing:.08em;text-transform:uppercase}
+.company-card-availability{margin-top:auto;border-top:1px solid #d9ddda;padding-top:18px;color:#526052;font:600 9px var(--font-mono);letter-spacing:.08em;text-transform:uppercase}
 .coming-soon-page{--coming-accent:#b8ff3d;position:relative;min-height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:0 7vw;background:#061713;color:#fff}
 .coming-soon-grid{position:absolute;inset:0;opacity:.16;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse at 70% 50%,#000,transparent 74%);pointer-events:none}
 .coming-soon-orb{position:absolute;top:17%;right:8%;width:min(42vw,570px);aspect-ratio:1;border:1px solid color-mix(in srgb,var(--coming-accent) 45%,transparent);border-radius:50%;box-shadow:inset 0 0 90px color-mix(in srgb,var(--coming-accent) 8%,transparent),0 0 0 34px color-mix(in srgb,var(--coming-accent) 4%,transparent);pointer-events:none}

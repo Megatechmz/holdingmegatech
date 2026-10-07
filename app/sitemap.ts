@@ -6,8 +6,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/megatechnology", "/megatechnology/sobre", "/megatechnology/servicos", "/megatechnology/solucoes", "/megatechnology/projetos", "/megatechnology/contactos",
     "/legal-start", "/legal-start/sobre", "/legal-start/servicos", "/legal-start/areas-atuacao", "/legal-start/contactos",
-    "/magnus-microcredito",
-    "/transmec-solutions",
   ];
 
   return routes.map((route) => ({
