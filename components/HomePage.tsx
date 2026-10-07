@@ -63,7 +63,7 @@ export function HomePage() {
         <div className="hero-grid" aria-hidden="true" /><div className="orb orb-one" aria-hidden="true" /><div className="orb orb-two" aria-hidden="true" />
         <div className="hero-copy">
           <p className="eyebrow"><span /> Grupo moçambicano · Maputo</p>
-          <h1>Um grupo.<br />xyz soluções.<br /><em>Uma visão de futuro.</em></h1>
+          <h1>Um grupo.<br />Diferentes soluções.<br /><em>Uma visão de futuro.</em></h1>
           <p className="lead">Um ecossistema empresarial que une tecnologia, registo empresarial, soluções financeiras, transporte e manutenção para fazer ideias, organizações e pessoas avançarem.</p>
           <div className="hero-actions"><a className="button button-primary" href="#empresas">Explorar empresas <span>↓</span></a><a className="text-link" href="#contactos">Falar connosco <span>↗</span></a></div>
         </div>
