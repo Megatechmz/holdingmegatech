@@ -188,6 +188,7 @@
 .company-site .showcase-top.company-section-heading{justify-content:initial}
 @media(max-width:780px){.company-site .company-section-heading{display:block}.company-site .company-section-heading>h2{margin-top:22px}.company-site .showcase-top.company-section-heading h2{margin-top:22px}}
 .theme-legal .company-symbol .symbol-logo{width:min(220px,78%);height:min(210px,66%);padding:7%;border-radius:20%}
+.theme-legal .company-brand-logo{width:68px;height:65px}
 .site-copyright{display:block;flex:1 0 100%;width:100%;max-width:none!important;margin:0!important;text-align:center;text-transform:none;letter-spacing:.04em;line-height:1.6;opacity:.82}
 .group-footer .site-copyright{color:#061713;font-size:9px}
 .company-footer .site-copyright,.coming-soon-footer .site-copyright{color:#fff}
