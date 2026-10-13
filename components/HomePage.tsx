@@ -84,10 +84,6 @@ export function HomePage() {
 
       <section className="companies-section" id="empresas">
         <div className="section-heading" data-reveal><p className="eyebrow dark"><span /> O nosso ecossistema</p><h2>Especialistas em cada área.<br /><em>Uma ambição partilhada.</em></h2><p>Quatro empresas independentes, unidas por uma cultura de proximidade, rigor e inovação.</p></div>
-        <div className="ecosystem-note" data-reveal>
-          <article><span>01 / ECOSSISTEMA</span><h3>Competências que se complementam.</h3><p>Da ideia à operação, reunimos tecnologia, registo empresarial, microcrédito, transportes e manutenção para apoiar pessoas e organizações em diferentes fases do seu percurso.</p></article>
-          <article><span>02 / PORTAIS</span><h3>Uma porta de entrada para cada solução.</h3><p>Os portais da Megatechnology e da Legal Start apresentam os serviços e formas de contacto de cada empresa. As áreas da Mega Microcrédito e da TransMec estão em preparação e serão disponibilizadas em breve.</p></article>
-        </div>
         <div className="company-list">
           {cards.map((company, index) => <article className={`company-card ${company.className}`} key={company.slug} data-reveal onPointerMove={tiltCard} onPointerLeave={resetTilt}>
             <div className="company-number">0{index + 1}</div><div className="company-logo-stage">{company.logo ? <img src={company.logo} alt={`${company.name} — logótipo`} /> : company.key === "credit" ? <span className="mega-credit-wordmark">MEGA<small>MICROCRÉDITO</small></span> : <span className="transmec-wordmark" aria-label="TransMec Solutions"><b>TRANS</b>MEC<small>SOLUTIONS</small></span>}</div>
