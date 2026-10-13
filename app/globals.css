@@ -153,6 +153,11 @@
 .vision-copy h2{font-size:clamp(2.8rem,5.4vw,6.3rem)}
 .metrics div{padding:32px 0}
 @media(max-width:780px){.vision-section{padding:75px 6vw}.metrics{margin-top:45px}.vision-note{margin-top:32px}}
+.section-heading{grid-template-columns:minmax(0,1.25fr) minmax(250px,.75fr);gap:24px 6vw}
+.section-heading>.eyebrow{grid-column:1/-1;margin-bottom:0}
+.section-heading h2{grid-column:1}
+.section-heading>p:last-child{grid-column:2;align-self:end;margin:0 0 8px}
+@media(max-width:780px){.section-heading{display:block}.section-heading h2{margin-top:22px}.section-heading>p:last-child{display:block;margin-top:20px}}
 .about-holding{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);align-items:center;gap:8vw;padding:105px 7vw;background:#e8ebe4;color:#0c2119}
 .about-holding-copy>.eyebrow{color:#64716b}
 .about-holding-copy>.eyebrow span{background:#829b56}
