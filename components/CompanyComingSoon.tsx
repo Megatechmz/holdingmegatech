@@ -23,7 +23,7 @@ export function CompanyComingSoon({ company }: { company: Company }) {
         <a className="coming-soon-contact" href="/#empresas">Conhecer as outras empresas <span>↗</span></a>
       </section>
       <footer className="coming-soon-footer">
-        <span>© {new Date().getFullYear()} The Holding</span>
+        <span>© 2026 Copyrights The Holding. Todos Direitos Reservados.</span>
         <ContactDetails className="coming-soon-contact-details" />
       </footer>
     </main>

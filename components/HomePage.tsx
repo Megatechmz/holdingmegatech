@@ -140,7 +140,7 @@ export function HomePage() {
       </section>
 
       <section className="contact-section" id="contactos" data-reveal><p className="eyebrow dark"><span /> Vamos conversar</p><div><h2>Grandes movimentos<br />começam com uma conversa.</h2><a className="circle-link" href="mailto:seiuanealodio@gmail.com" aria-label="Enviar email">↗</a></div><ContactDetails /></section>
-      <footer className="group-footer"><Link className="brand" href="/"><span className="brand-mark">T</span><span>THE <b>HOLDING</b></span></Link><p>Conteúdo institucional provisório, preparado para atualização.</p><span>© {new Date().getFullYear()} The Holding</span></footer>
+      <footer className="group-footer"><Link className="brand" href="/"><span className="brand-mark">T</span><span>THE <b>HOLDING</b></span></Link><p>Conteúdo institucional provisório, preparado para atualização.</p><span>© 2026 Copyrights The Holding. Todos Direitos Reservados.</span></footer>
     </main>
   );
 }
