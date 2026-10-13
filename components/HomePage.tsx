@@ -44,7 +44,7 @@ export function HomePage() {
   function enterCompany(event: React.MouseEvent<HTMLAnchorElement>, company: (typeof cards)[number]) {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     event.preventDefault(); setEntering({ name: company.name, accent: company.accent, accent2: company.accent2, slug: company.slug });
-    window.setTimeout(() => { window.location.href = `/${company.slug}`; }, 620);
+    window.setTimeout(() => { window.location.href = `/${company.slug}`; }, 3000);
   }
 
   return (
