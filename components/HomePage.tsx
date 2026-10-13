@@ -103,6 +103,7 @@ export function HomePage() {
         <div className="company-list">
           {cards.map((company, index) => <article className={`company-card ${company.className}`} key={company.slug} aria-label={company.name} data-reveal onPointerMove={tiltCard} onPointerLeave={resetTilt}>
             <div className="company-number">0{index + 1}</div><div className="company-logo-stage">{company.logo ? <img src={company.logo} alt={`${company.name} — logótipo`} /> : company.key === "credit" ? <span className="mega-credit-wordmark" aria-label="Mega Microcrédito">MEGA<small>MICROCRÉDITO</small></span> : <span className="transmec-wordmark" aria-label="TransMec Solutions"><b>TRANS</b>MEC<small>SOLUTIONS</small></span>}</div>
+            <div className="company-card-divider" aria-hidden="true" />
             <p>{company.comingSoon ? "Página em preparação. Mais informações em breve." : company.intro}</p>
             {company.comingSoon ? <span className="company-card-availability" role="status">Brevemente</span> : <a href={`/${company.slug}`} onClick={(event) => enterCompany(event, company)}>Explorar empresa <span>↗</span></a>}
           </article>)}
