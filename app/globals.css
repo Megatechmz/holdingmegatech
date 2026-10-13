@@ -143,7 +143,7 @@
 @keyframes binary-pulse{to{opacity:.35;letter-spacing:.32em}}
 @keyframes documents-arrive{from{opacity:0;transform:translate(20px,-45%) rotate(4deg)}to{opacity:1;transform:translate(0,-50%) rotate(0)}}
 @media(max-width:780px){.page-transition.for-megatechnology .transition-code-panel{left:6vw;bottom:6vh;min-width:0;width:88vw;padding:15px;font-size:9px}.page-transition.for-megatechnology .transition-code-panel>span{font-size:9px}.page-transition.for-legal-start .transition-documents{right:7vw;top:20%;width:118px;height:160px}.transition-paper.paper-front{padding:14px 12px}.transition-paper.paper-front small{font-size:6px}.transition-paper.paper-front b{margin:15px 0;font-size:10px}.transition-paper.paper-front i{margin:7px 0}.transition-paper.paper-front strong{right:10px;bottom:9px;font-size:8px}}
-.vision-section{padding-top:110px;padding-bottom:110px;gap:6vw}
+.vision-section{min-height:100svh;padding-top:110px;padding-bottom:110px;gap:6vw}
 .vision-copy h2{font-size:clamp(2.8rem,5.4vw,6.3rem)}
 .metrics div{padding:32px 0}
 @media(max-width:780px){.vision-section{padding:75px 6vw}.metrics{margin-top:45px}.vision-note{margin-top:32px}}
