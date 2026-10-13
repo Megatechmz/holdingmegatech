@@ -191,6 +191,8 @@
 .theme-legal .company-brand-logo{width:68px;height:65px}
 .theme-legal .company-footer-logo{width:75px;height:75px;padding:0}
 .theme-legal .company-footer-logo img{width:70px;height:70px;max-width:70px;object-fit:contain}
+.theme-tech .company-brand-logo,.theme-tech .company-footer-logo{width:75px;height:75px;padding:5px!important}
+.theme-tech .company-brand-logo img,.theme-tech .company-footer-logo img{width:65px;height:65px;max-width:65px;object-fit:contain}
 .site-copyright{display:block;flex:1 0 100%;width:100%;max-width:none!important;margin:0!important;text-align:center;text-transform:none;letter-spacing:.04em;line-height:1.6;opacity:.82}
 .group-footer .site-copyright{color:#061713;font-size:9px}
 .company-footer .site-copyright,.coming-soon-footer .site-copyright{color:#fff}
