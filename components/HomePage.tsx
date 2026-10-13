@@ -136,7 +136,7 @@ export function HomePage() {
       <section className="vision-section" id="impacto">
         <div className="vision-copy" data-reveal><p className="eyebrow"><span /> A nossa direção</p><h2>O futuro constrói-se com <em>competência</em>, confiança e coragem.</h2></div>
         <div className="metrics" data-reveal><div><strong data-count="4" aria-label="4">00</strong><span>áreas estratégicas</span></div><div><strong data-count="1" aria-label="1">00</strong><span>visão integrada</span></div><div><strong>∞</strong><span>possibilidades</span></div></div>
-        <p className="vision-note">Criamos relações duradouras e soluções úteis — com atenção ao contexto de Moçambique e ambição para ir além-fronteiras.</p>
+        <p className="vision-note">Criamos relações duradouras e soluções úteis, com atenção ao contexto de Moçambique e ambição para ir além fronteiras.</p>
       </section>
 
       <section className="contact-section" id="contactos" data-reveal><p className="eyebrow dark"><span /> Vamos conversar</p><div><h2>Grandes movimentos<br />começam com uma conversa.</h2><a className="circle-link" href="mailto:seiuanealodio@gmail.com" aria-label="Enviar email">↗</a></div><ContactDetails /></section>
