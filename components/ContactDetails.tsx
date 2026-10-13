@@ -3,10 +3,10 @@ type ContactDetailsProps = { className?: string };
 export function ContactDetails({ className = "" }: ContactDetailsProps) {
   return (
     <div className={`contact-details ${className}`.trim()}>
-      <a href="tel:+258849306684">
+      <a href="tel:+258829305684">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 3a14 14 0 0 1-6-6l3-2-2-5Z" /></svg>
         <small>Telefone</small>
-        <span>+258 84 930 6684</span>
+        <span>82 930 5684</span>
       </a>
       <a href="mailto:seiuanealodio@gmail.com">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" /><path d="m3 6 9 7 9-7" /></svg>

@@ -9,7 +9,7 @@ const cards = [companies.tech, companies.legal, companies.credit, companies.tran
 
 export function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [entering, setEntering] = useState<{ name: string; accent: string; accent2: string } | null>(null);
+  const [entering, setEntering] = useState<{ name: string; accent: string; accent2: string; slug: string } | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const mainRef = useRef<HTMLElement>(null);
 
@@ -43,13 +43,15 @@ export function HomePage() {
 
   function enterCompany(event: React.MouseEvent<HTMLAnchorElement>, company: (typeof cards)[number]) {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    event.preventDefault(); setEntering({ name: company.name, accent: company.accent, accent2: company.accent2 });
+    event.preventDefault(); setEntering({ name: company.name, accent: company.accent, accent2: company.accent2, slug: company.slug });
     window.setTimeout(() => { window.location.href = `/${company.slug}`; }, 620);
   }
 
   return (
     <main ref={mainRef} className="group-home">
-      <div className={`page-transition ${entering ? "active" : ""}`} style={{"--transition-accent": entering?.accent, "--transition-secondary": entering?.accent2} as React.CSSProperties} aria-hidden={!entering}>
+      <div className={`page-transition ${entering ? "active" : ""} ${entering ? `for-${entering.slug}` : ""}`} style={{"--transition-accent": entering?.accent, "--transition-secondary": entering?.accent2} as React.CSSProperties} aria-hidden={!entering}>
+        <div className="transition-code-panel" aria-hidden="true"><small>INITIALIZING_PORTAL</small><span><i>01</i> const portal = "MEGATECHNOLOGY";</span><span><i>02</i> status = "connecting";</span><span><i>03</i> deploy();</span><b>01001000&nbsp; 01010100</b></div>
+        <div className="transition-documents" aria-hidden="true"><div className="transition-paper paper-back"/><div className="transition-paper paper-middle"/><div className="transition-paper paper-front"><small>LEGAL START</small><b>REGISTO<br/>EMPRESARIAL</b><i/><i/><i/><strong>LS</strong></div></div>
         <span>A entrar em</span><strong>{entering?.name}</strong><i />
       </div>
       <header className={`site-header group-header ${scrolled ? "is-scrolled" : ""}`}>
@@ -65,7 +67,7 @@ export function HomePage() {
         <div className="hero-copy">
           <p className="eyebrow"><span /> Grupo moçambicano · Maputo</p>
           <h1>Um grupo.<br />Diferentes soluções.<br /><em>Uma visão de futuro.</em></h1>
-          <p className="lead">Um ecossistema empresarial que une tecnologia, registo empresarial, soluções financeiras, transporte e manutenção para fazer ideias, organizações e pessoas avançarem.</p>
+          <p className="lead">Um ecossistema moçambicano que combina tecnologia, formalização empresarial, soluções financeiras, logística e manutenção. Cada empresa especializa-se numa etapa do crescimento — com a mesma visão de confiança, inovação e progresso.</p>
           <div className="hero-actions"><a className="button button-primary" href="#empresas">Explorar empresas <span>↓</span></a><a className="text-link" href="#contactos">Falar connosco <span>↗</span></a></div>
         </div>
         <div className="hero-3d" aria-hidden="true">
@@ -82,6 +84,10 @@ export function HomePage() {
 
       <section className="companies-section" id="empresas">
         <div className="section-heading" data-reveal><p className="eyebrow dark"><span /> O nosso ecossistema</p><h2>Especialistas em cada área.<br /><em>Uma ambição partilhada.</em></h2><p>Quatro empresas independentes, unidas por uma cultura de proximidade, rigor e inovação.</p></div>
+        <div className="ecosystem-note" data-reveal>
+          <article><span>01 / ECOSSISTEMA</span><h3>Competências que se complementam.</h3><p>Da ideia à operação, reunimos tecnologia, registo empresarial, microcrédito, transportes e manutenção para apoiar pessoas e organizações em diferentes fases do seu percurso.</p></article>
+          <article><span>02 / PORTAIS</span><h3>Uma porta de entrada para cada solução.</h3><p>Os portais da Megatechnology e da Legal Start apresentam os serviços e formas de contacto de cada empresa. As áreas da Mega Microcrédito e da TransMec estão em preparação e serão disponibilizadas em breve.</p></article>
+        </div>
         <div className="company-list">
           {cards.map((company, index) => <article className={`company-card ${company.className}`} key={company.slug} data-reveal onPointerMove={tiltCard} onPointerLeave={resetTilt}>
             <div className="company-number">0{index + 1}</div><div className="company-logo-stage">{company.logo ? <img src={company.logo} alt={`${company.name} — logótipo`} /> : company.key === "credit" ? <span className="mega-credit-wordmark">MEGA<small>MICROCRÉDITO</small></span> : <span className="transmec-wordmark" aria-label="TransMec Solutions"><b>TRANS</b>MEC<small>SOLUTIONS</small></span>}</div>
