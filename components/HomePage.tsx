@@ -14,11 +14,34 @@ export function HomePage() {
   const mainRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    let disposed = false;
     const nodes = document.querySelectorAll<HTMLElement>("[data-reveal]");
     const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
       if (entry.isIntersecting) entry.target.classList.add("is-visible");
     }), { threshold: 0.14 });
     nodes.forEach((node) => observer.observe(node));
+    const countNodes = document.querySelectorAll<HTMLElement>("[data-count]");
+    const countObserver = new IntersectionObserver((entries) => entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const node = entry.target as HTMLElement;
+      countObserver.unobserve(node);
+      const target = Number(node.dataset.count);
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        node.textContent = String(target).padStart(2, "0");
+        return;
+      }
+      const startTime = performance.now();
+      const duration = 1200;
+      const tick = (now: number) => {
+        if (disposed) return;
+        const progress = Math.min((now - startTime) / duration, 1);
+        const easedProgress = 1 - Math.pow(1 - progress, 3);
+        node.textContent = String(Math.floor(target * easedProgress)).padStart(2, "0");
+        if (progress < 1) window.requestAnimationFrame(tick);
+      };
+      window.requestAnimationFrame(tick);
+    }), { threshold: 0.3 });
+    countNodes.forEach((node) => countObserver.observe(node));
     const handleScroll = () => {
       const progress = Math.min(window.scrollY / Math.max(window.innerHeight, 1), 1.8);
       mainRef.current?.style.setProperty("--scroll-progress", String(progress));
@@ -26,7 +49,7 @@ export function HomePage() {
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
-    return () => { observer.disconnect(); window.removeEventListener("scroll", handleScroll); };
+    return () => { disposed = true; observer.disconnect(); countObserver.disconnect(); window.removeEventListener("scroll", handleScroll); };
   }, []);
 
   function tiltCard(event: React.PointerEvent<HTMLElement>) {
@@ -112,7 +135,7 @@ export function HomePage() {
 
       <section className="vision-section" id="impacto">
         <div className="vision-copy" data-reveal><p className="eyebrow"><span /> A nossa direção</p><h2>O futuro constrói-se com <em>competência</em>, confiança e coragem.</h2></div>
-        <div className="metrics" data-reveal><div><strong>04</strong><span>áreas estratégicas</span></div><div><strong>01</strong><span>visão integrada</span></div><div><strong>∞</strong><span>possibilidades</span></div></div>
+        <div className="metrics" data-reveal><div><strong data-count="4" aria-label="4">00</strong><span>áreas estratégicas</span></div><div><strong data-count="1" aria-label="1">00</strong><span>visão integrada</span></div><div><strong>∞</strong><span>possibilidades</span></div></div>
         <p className="vision-note">Criamos relações duradouras e soluções úteis — com atenção ao contexto de Moçambique e ambição para ir além-fronteiras.</p>
       </section>
 
