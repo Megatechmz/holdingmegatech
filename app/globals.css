@@ -185,4 +185,6 @@
 .group-footer .site-copyright{color:#061713}
 .company-footer .site-copyright,.coming-soon-footer .site-copyright{color:#fff}
 .group-footer,.company-footer,.coming-soon-footer{flex-wrap:wrap}
-@media(max-width:780px){.site-copyright{flex-basis:100%;text-align:center}.group-footer,.company-footer,.coming-soon-footer{align-items:center}}
+.group-footer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr) minmax(0,1fr)}
+.group-footer .site-copyright{grid-column:2;grid-row:1}
+@media(max-width:780px){.site-copyright{flex-basis:100%;text-align:center}.group-footer{grid-template-columns:1fr;gap:20px}.group-footer .site-copyright{grid-column:1;grid-row:auto}.group-footer,.company-footer,.coming-soon-footer{align-items:center}}
