@@ -6,7 +6,7 @@ export const companies = {
     eyebrow: "Tecnologia · Produto · Inovação", headline: "Tecnologia que transforma negócios.",
     intro: "Desenhamos e implementamos produtos digitais, sistemas e infraestruturas que tornam organizações mais rápidas, conectadas e preparadas para crescer.",
     logo: "/brands/megatechnology-trimmed.png", showcaseImage: "/showcases/megatechnology-showcase.jpg", accent: "#22c7ec", accent2: "#0057b8", dark: "#030b1d", pale: "#eefaff", statement: "Do primeiro protótipo à operação em escala.",
-    services: ["Websites & plataformas", "Software à medida", "Aplicações mobile", "UX/UI Design", "Integrações & APIs", "Cloud & infraestrutura", "Automação de processos", "Consultoria tecnológica"],
+    services: ["Websites & plataformas", "Software à medida", "Aplicações mobile", "UX/UI Design", "Integrações & APIs", "Cloud & infraestrutura", "Automação de processos", "Consultoria tecnológica", "Sistema de Vigilância e Controle de Acesso", "Segurança Eletrónica"],
     showcaseTitle: "Soluções construídas para o mundo real.",
     showcases: [
       { tag: "Produto digital", title: "Plataforma de operações", note: "Dados, equipas e decisões no mesmo lugar." },
