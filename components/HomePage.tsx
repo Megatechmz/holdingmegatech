@@ -62,7 +62,7 @@ export function HomePage() {
       </header>
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}><a href="#sobre" onClick={() => setMenuOpen(false)}>Sobre</a><a href="#empresas" onClick={() => setMenuOpen(false)}>Empresas</a><a href="#contactos" onClick={() => setMenuOpen(false)}>Contactos</a></div>
 
-      <section className="hero" id="sobre">
+      <section className="hero">
         <div className="hero-grid" aria-hidden="true" /><div className="orb orb-one" aria-hidden="true" /><div className="orb orb-two" aria-hidden="true" />
         <div className="hero-copy">
           <p className="eyebrow"><span /> Grupo moçambicano · Maputo</p>
@@ -80,6 +80,22 @@ export function HomePage() {
         </div>
         <aside className="hero-index" aria-label="Áreas do grupo"><p>QUATRO EMPRESAS<br />UMA DIREÇÃO</p><ol><li><span>01</span> Tecnologia</li><li><span>02</span> Registo empresarial</li><li><span>03</span> Microcrédito</li><li><span>04</span> Transporte & manutenção</li></ol></aside>
         <p className="scroll-note">SCROLL PARA DESCOBRIR <span>↓</span></p>
+      </section>
+
+      <section className="about-holding" id="sobre" aria-labelledby="about-title">
+        <div className="about-holding-copy" data-reveal>
+          <p className="eyebrow"><span /> Sobre a The Holding</p>
+          <h2 id="about-title">Um grupo.<br /><em>Várias formas de avançar.</em></h2>
+          <p>A The Holding reúne empresas especializadas em áreas complementares para apoiar pessoas, empreendedores e organizações em Moçambique. O ecossistema liga competências e serviços distintos sob uma visão comum de confiança, rigor e progresso.</p>
+          <p>Mais do que reunir marcas, queremos facilitar o acesso a soluções adequadas a cada etapa — desde estruturar uma ideia e formalizar um negócio até desenvolver tecnologia ou manter uma operação em movimento.</p>
+        </div>
+        <div className="about-holding-areas" data-reveal>
+          <p>ÁREAS DO ECOSSISTEMA</p>
+          <div><span>01</span><strong>Tecnologia & inovação</strong></div>
+          <div><span>02</span><strong>Registo empresarial</strong></div>
+          <div><span>03</span><strong>Microcrédito</strong><small>Em preparação</small></div>
+          <div><span>04</span><strong>Transportes, logística & manutenção</strong><small>Em preparação</small></div>
+        </div>
       </section>
 
       <section className="companies-section" id="empresas">
