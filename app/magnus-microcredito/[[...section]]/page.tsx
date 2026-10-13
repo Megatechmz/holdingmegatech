@@ -1,6 +1,5 @@
-import { CompanyComingSoon } from "../../../components/CompanyComingSoon";
-import { companies } from "../../../data/companies";
+import { redirect } from "next/navigation";
 
 export default function MagnusMicrocreditoPage() {
-  return <CompanyComingSoon company={companies.credit} />;
+  redirect("/mega-microcredito");
 }

@@ -67,8 +67,8 @@
 
 /* Availability states for companies still in preparation */
 .company-card.theme-credit{--card-accent:#b8ff3d;--card-secondary:#75992a}
-.magnus-wordmark{display:grid;place-items:center;color:#102018;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;letter-spacing:.06em;line-height:.9}
-.magnus-wordmark small{margin-top:9px;color:#617366;font:600 9px var(--font-mono);letter-spacing:.25em}
+.mega-credit-wordmark{display:grid;place-items:center;color:#102018;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;letter-spacing:.06em;line-height:.9}
+.mega-credit-wordmark small{margin-top:9px;color:#617366;font:600 9px var(--font-mono);letter-spacing:.25em}
 .company-card-availability{margin-top:auto;border-top:1px solid #d9ddda;padding-top:18px;color:#526052;font:600 9px var(--font-mono);letter-spacing:.08em;text-transform:uppercase}
 .coming-soon-page{--coming-accent:#b8ff3d;position:relative;min-height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:0 7vw;background:#061713;color:#fff}
 .coming-soon-grid{position:absolute;inset:0;opacity:.16;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse at 70% 50%,#000,transparent 74%);pointer-events:none}
@@ -93,3 +93,13 @@
 .coming-soon-footer{gap:20px;padding:22px 0;border-top:1px solid #ffffff24;color:#81918a;font:9px var(--font-mono)}
 .coming-soon-footer a:hover{color:#fff}
 @media(max-width:780px){.coming-soon-page{padding:0 6vw}.coming-soon-header{height:70px}.coming-soon-header .brand{font-size:11px}.coming-soon-back{font-size:8px}.coming-soon-content{padding:68px 0 88px}.coming-soon-orb{width:78vw;top:32%;right:-31vw;opacity:.7}.coming-soon-content h1{font-size:clamp(3.25rem,14vw,5.5rem)}.coming-soon-copy{font-size:13px}.coming-soon-footer{align-items:flex-start;flex-direction:column;gap:12px}}
+
+.contact-details{display:flex;align-items:center;flex-wrap:wrap;gap:12px 24px;margin-top:24px;color:#69736f;font:10px var(--font-mono)}
+.contact-details a{display:inline-flex;align-items:center;gap:9px;transition:color .2s}
+.contact-details a:hover{color:var(--acid,var(--coming-accent,#b8ff3d))}
+.contact-details svg{width:15px;height:15px;flex:0 0 15px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.company-contact-details{margin:0;flex-direction:column;align-items:flex-start;gap:10px;color:#aebbb5}
+.coming-soon-contact-details{margin:0;gap:12px 20px;color:inherit}
+.coming-soon-contact-details a:hover{color:#fff}
+.coming-soon-contact-details svg{width:13px;height:13px;flex-basis:13px}
+@media(max-width:780px){.contact-details{align-items:flex-start;flex-direction:column;gap:13px}.company-contact-details{gap:10px}.coming-soon-contact-details{gap:10px}}

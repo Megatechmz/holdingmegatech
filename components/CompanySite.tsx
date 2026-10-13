@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { companies, type CompanyKey } from "../data/companies";
+import { ContactDetails } from "./ContactDetails";
 
 const navMap: Record<CompanyKey, { label: string; path: string }[]> = {
   tech: [{label:"Sobre",path:"sobre"},{label:"Serviços",path:"servicos"},{label:"Soluções",path:"solucoes"},{label:"Projetos",path:"projetos"},{label:"Contactos",path:"contactos"}],
@@ -130,6 +131,6 @@ export function CompanySite({ companyKey, active }: { companyKey: CompanyKey; ac
 
     <div className={`inquiry-modal ${formOpen ? "open" : ""}`} role="dialog" aria-modal="true" aria-hidden={!formOpen} aria-labelledby="inquiry-title" onMouseDown={event => event.target === event.currentTarget && setFormOpen(false)}><div className="inquiry-panel"><button className="inquiry-close" type="button" onClick={() => setFormOpen(false)} aria-label="Fechar formulário">×</button><p className="eyebrow dark"><span/> Pedido de contacto</p><h2 id="inquiry-title">{company.ctaLabel}</h2><p>Preencha os dados abaixo. A equipa entrará em contacto consigo.</p><form onSubmit={submitInquiry}><div className="inquiry-grid"><label>Nome completo<input name="nome" required /></label><label>Telefone<input name="telefone" type="tel" required /></label><label>Email<input name="email" type="email" /></label>{inquiryFields[companyKey].map(field => <label className={field.kind === "textarea" ? "wide" : ""} key={field.name}>{field.label}{field.kind === "textarea" ? <textarea name={field.name} rows={4} required/> : field.options ? <select name={field.name} required><option value="">Selecione</option>{field.options.map(option => <option value={option} key={option}>{option}</option>)}</select> : <input name={field.name} type={field.type || "text"} required/>}</label>)}</div><button className="button company-button" type="submit">Enviar pedido <span>↗</span></button></form><small>Ao enviar, será aberto o seu aplicativo de email com os dados preenchidos.</small></div></div>
 
-    <footer className="company-footer"><div><span className="company-footer-logo">{company.logo ? <img src={company.logo} alt={`${company.name} — logótipo`} /> : <span className="transmec-wordmark" aria-label="TransMec Solutions"><b>TRANS</b>MEC<small>SOLUTIONS</small></span>}</span></div><p><a href="tel:+258849306684">+258 84 930 6684</a><br/><a href="mailto:seiuanealodio@gmail.com">seiuanealodio@gmail.com</a><br/>Maputo, Moçambique</p><a href="/">← Voltar para The Holding</a></footer>
+    <footer className="company-footer"><div><span className="company-footer-logo">{company.logo ? <img src={company.logo} alt={`${company.name} — logótipo`} /> : <span className="transmec-wordmark" aria-label="TransMec Solutions"><b>TRANS</b>MEC<small>SOLUTIONS</small></span>}</span></div><ContactDetails className="company-contact-details"/><a href="/">← Voltar para The Holding</a></footer>
   </main>;
 }

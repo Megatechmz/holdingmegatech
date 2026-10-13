@@ -1,4 +1,5 @@
 import type { companies } from "../data/companies";
+import { ContactDetails } from "./ContactDetails";
 
 type Company = (typeof companies)[keyof typeof companies];
 
@@ -23,8 +24,7 @@ export function CompanyComingSoon({ company }: { company: Company }) {
       </section>
       <footer className="coming-soon-footer">
         <span>© {new Date().getFullYear()} The Holding</span>
-        <a href="tel:+258849306684">+258 84 930 6684</a>
-        <a href="mailto:seiuanealodio@gmail.com">seiuanealodio@gmail.com</a>
+        <ContactDetails className="coming-soon-contact-details" />
       </footer>
     </main>
   );
