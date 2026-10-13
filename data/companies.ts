@@ -33,7 +33,7 @@ export const companies = {
     key: "credit", slug: "mega-microcredito", name: "Mega Microcrédito", short: "MEGA/CRÉDITO", className: "theme-credit", comingSoon: true,
     eyebrow: "Microcrédito · Em preparação", headline: "Mega Microcrédito. Brevemente.",
     intro: "A página da Mega Microcrédito está em preparação. Em breve, partilharemos mais informações.",
-    accent: "#b8ff3d", accent2: "#75992a", dark: "#061713", pale: "#f2f0e8", statement: "Uma nova solução financeira está a caminho.",
+    logo: "/brands/mega-microcredito.png", accent: "#b8ff3d", accent2: "#75992a", dark: "#061713", pale: "#f2f0e8", statement: "Uma nova solução financeira está a caminho.",
     services: ["Crédito pessoal", "Crédito para negócio", "Capital de giro", "Equipamento produtivo", "Crédito para emergências", "Soluções personalizadas"],
     showcaseTitle: "Financiamento que acompanha a sua realidade.",
     showcases: [
