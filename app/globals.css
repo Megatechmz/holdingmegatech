@@ -176,3 +176,8 @@
 .about-holding-areas strong{font-size:13px;font-weight:550}
 .about-holding-areas small{color:#869087;font:8px var(--font-mono);text-transform:uppercase;letter-spacing:.08em}
 @media(max-width:780px){.about-holding{grid-template-columns:1fr;gap:34px;padding:78px 6vw}.about-holding-copy h2{font-size:clamp(2.7rem,12vw,4.5rem)}.about-holding-copy>p:not(.eyebrow){font-size:13px}.about-holding-areas{padding:23px 19px}.about-holding-areas>div{grid-template-columns:28px 1fr;gap:9px;padding:14px 0}.about-holding-areas small{grid-column:2}}
+.company-site .company-section-heading{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;align-items:start}
+.company-site .company-section-heading>.eyebrow{grid-column:1;margin:0}
+.company-site .company-section-heading>h2{grid-column:1;margin:0;max-width:900px;text-align:left}
+.company-site .showcase-top.company-section-heading{justify-content:initial}
+@media(max-width:780px){.company-site .company-section-heading{display:block}.company-site .company-section-heading>h2{margin-top:22px}.company-site .showcase-top.company-section-heading h2{margin-top:22px}}
