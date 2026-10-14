@@ -8,10 +8,10 @@ export function ContactDetails({ className = "" }: ContactDetailsProps) {
         <small>Telefone</small>
         <span>82 930 5684</span>
       </a>
-      <a href="mailto:seiuanealodio@gmail.com">
+      <a href="mailto:as.megatechmz@gmail.com">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" /><path d="m3 6 9 7 9-7" /></svg>
         <small>Email</small>
-        <span>seiuanealodio@gmail.com</span>
+        <span>as.megatechmz@gmail.com</span>
       </a>
       <a href="https://www.google.com/maps/search/?api=1&query=Maputo%2C%20Mo%C3%A7ambique" target="_blank" rel="noreferrer">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></svg>
