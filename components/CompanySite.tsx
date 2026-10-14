@@ -48,6 +48,16 @@ export function CompanySite({ companyKey, active }: { companyKey: CompanyKey; ac
   const money = (value: number) => new Intl.NumberFormat("pt-MZ", { maximumFractionDigits: 0 }).format(value) + " MT";
 
   useEffect(() => {
+    if (companyKey !== "tech" && companyKey !== "legal") return;
+    const icons = Array.from(document.head.querySelectorAll<HTMLLinkElement>('link[rel~="icon"]'));
+    const previousHrefs = icons.map(icon => icon.href);
+    icons.forEach(icon => { icon.href = company.logo; });
+    return () => icons.forEach((icon, index) => {
+      if (icon.isConnected) icon.href = previousHrefs[index];
+    });
+  }, [companyKey, company.logo]);
+
+  useEffect(() => {
     const nodes = document.querySelectorAll<HTMLElement>("[data-reveal]");
     const observer = new IntersectionObserver((entries) => entries.forEach((entry) => entry.isIntersecting && entry.target.classList.add("is-visible")), { threshold: .1 });
     nodes.forEach((node) => observer.observe(node));
