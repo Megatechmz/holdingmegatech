@@ -139,7 +139,7 @@ export function HomePage() {
         <p className="vision-note">Criamos relações duradouras e soluções úteis, com atenção ao contexto de Moçambique e ambição para ir além fronteiras.</p>
       </section>
 
-      <section className="contact-section" id="contactos" data-reveal><p className="eyebrow dark"><span /> Vamos conversar</p><div><h2>Grandes movimentos<br />começam com uma conversa.</h2><a className="circle-link" href="mailto:as.megatechmz@gmail.com" aria-label="Enviar email">↗</a></div><ContactDetails /></section>
+      <section className="contact-section" id="contactos" data-reveal><p className="eyebrow dark"><span /> Vamos conversar</p><div><h2>Grandes movimentos<br />começam com uma conversa.</h2><a className="circle-link" href="mailto:as.megatechmz@gmail.com" aria-label="Enviar email">↗</a></div><div className="contact-layout"><figure className="contact-visual"><img src="/og.png" alt="The Holding — um grupo, diferentes soluções, uma visão de futuro"/><figcaption><span>THE HOLDING</span><span>MAPUTO · MOÇAMBIQUE</span></figcaption></figure><ContactDetails /></div></section>
       <footer className="group-footer"><Link className="brand" href="/"><span className="brand-mark">T</span><span>THE <b>HOLDING</b></span></Link><small className="group-footer-copyright">© 2026 Copyrights The Holding. Todos Direitos Reservados.</small></footer>
     </main>
   );
