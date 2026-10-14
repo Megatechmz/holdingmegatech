@@ -7,6 +7,7 @@ const geistMono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://the-holding.seiuanealodio.chatgpt.site"),
+  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
   title: "The Holding — Um Grupo. Diferentes Soluções.",
   description: "Tecnologia, registo empresarial, soluções financeiras, transportes, logística e manutenção num ecossistema preparado para o futuro.",
   openGraph: {
