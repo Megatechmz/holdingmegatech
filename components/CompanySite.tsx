@@ -37,7 +37,7 @@ const inquiryFields: Record<CompanyKey, { name: string; label: string; type?: st
 
 export function CompanySite({ companyKey, active }: { companyKey: CompanyKey; active?: string }) {
   const company = companies[companyKey];
-  const contactEmail = companyKey === "legal" ? "legal.start008@gmail.com" : "as.megatechmz@gmail.com";
+  const contactEmail = companyKey === "legal" ? "legal.start008@gmail.com" : "info@theholding.co.mz";
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [currentSection, setCurrentSection] = useState(active);
