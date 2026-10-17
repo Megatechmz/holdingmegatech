@@ -44,7 +44,7 @@ export const companies = {
     steps: ["Simule", "Solicite", "Envie documentos", "Aguarde a análise", "Receba a resposta"], cta: "O seu próximo passo pode começar hoje.", ctaLabel: "Solicitar crédito",
   },
   transport: {
-    key: "transport", slug: "transmec-solutions", name: "TransMec Solutions", short: "TRANS/MEC", className: "theme-transport", comingSoon: true,
+    key: "transport", slug: "transmec-solutions", name: "TransMec Solutions", short: "TRANS/MEC", className: "theme-transport", comingSoon: false,
     eyebrow: "Transportes · Logística · Manutenção", headline: "Movemos operações. Mantemos máquinas em ação.",
     intro: "Soluções integradas de transporte e logística, manutenção preventiva e corretiva de máquinas e equipamentos para operações seguras, eficientes e contínuas.",
     logo: "/brands/transmec-solutions.png", showcaseImage: "/showcases/transmec-solutions-showcase.jpg", accent: "#08a9b8", accent2: "#232323", dark: "#0b1517", pale: "#eef7f7", statement: "Carga em movimento. Equipamentos disponíveis.",
